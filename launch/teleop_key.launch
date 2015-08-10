@@ -1,0 +1,6 @@
+<launch>
+
+<node name="vrep_simulation" pkg="ackermann_robot" type="simulation"/>
+<node name="teleop_twist_keyboard" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen"  />
+
+</launch>
