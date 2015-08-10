@@ -61,12 +61,12 @@ int main(int argc, char **argv)
   ros::Publisher vel_pub =n_.advertise<geometry_msgs::Twist>("cmd_vel", 10);
 
   startStopSim(n_,0);
-  vel_msg.linear.x = 1;
+  vel_msg.linear.x = 0.1;
 
     while (ros::ok() && simulationRunning) {
 
 
-      vel_pub.publish(vel_msg);
+      // vel_pub.publish(vel_msg);
       ros::spinOnce();
       rate.sleep();
     }
